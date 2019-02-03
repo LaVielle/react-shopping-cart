@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1gt87",
+    "name": "Product 1",
+    "price": 3.99,
+    "image": "https://cdn.cheapism.com/images/040417_products_made_in_usa_slide_13_fs.max-784x410.jpg"
+  },
+  {
+    "id": "to0zo",
+    "name": "Product 2",
+    "price": 7.79,
+    "image": "https://cdn.cheapism.com/images/040417_products_made_in_usa_slide_13_fs.max-784x410.jpg"
+  },
+  {
+    "id": "m86nj",
+    "name": "Product 3",
+    "price": 129.99,
+    "image": "https://cdn.cheapism.com/images/040417_products_made_in_usa_slide_13_fs.max-784x410.jpg"
+  },
+  {
+    "id": "u93gy",
+    "name": "Product41",
+    "price": 350.00,
+    "image": "https://cdn.cheapism.com/images/040417_products_made_in_usa_slide_13_fs.max-784x410.jpg"
+  },
+  {
+    "id": "dk7s1",
+    "name": "Product 5",
+    "price": 25.00,
+    "image": "https://cdn.cheapism.com/images/040417_products_made_in_usa_slide_13_fs.max-784x410.jpg"
+  }
+]

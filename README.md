@@ -20,3 +20,14 @@ npm start
 ```
 
 The app is now available at http://localhost:3000
+
+## Docs
+
+#### Product Model
+
+A product is defined as follows:
+
+- `id` (String): a five character string that uniquely identifies the product
+- `name` (String): the display name of the product
+- `price` (Number): the price of one unit of the product
+- `image` (String): a url to an image file showing the product
