@@ -1,26 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addProductToCart } from '../actions';
 import '../styles/ProductCard.css'
 
 // Component that displays a product with a 'Add to cart' button
-export default class ProductCard extends React.Component {
+const ProductCard = (props, {dispatch}) => (
+  <div className="ProductCard-container">
+    <img className="ProductCard-image" src={props.data.image} alt={props.data.name}/>
+    <div style={{height: 20}}/>
+    <div>{props.data.name}</div>
+    <div style={{height: 20}}/>
+    <div style={{display: 'flex', flexDirection: 'row', alignSelf: 'stretch', justifyContent: 'space-between'}}>
+      <div>$ {props.data.price}</div>
+      <button
+        onClick={() => {dispatch(addProductToCart(props))}}
+      >
+        Add to cart
+      </button>
+    </div>
+  </div>
+)
 
-  componentDidMount() {
-    console.log('ProductCard mounted');
-    console.log(this.props);
-  }
-
-  render() {
-    return(
-      <div className="ProductCard-container">
-        <img className="ProductCard-image" src={this.props.data.image} alt={this.props.data.name}/>
-        <div style={{height: 20}}/>
-        <div>{this.props.data.name}</div>
-        <div style={{height: 20}}/>
-        <div style={{display: 'flex', flexDirection: 'row', alignSelf: 'stretch', justifyContent: 'space-between'}}>
-          <div>$ {this.props.data.price}</div>
-          <button>Add to cart</button>
-        </div>
-      </div>
-    )
-  }
-}
+export default connect()(ProductCard)
