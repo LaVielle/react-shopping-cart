@@ -1,0 +1,35 @@
+.CartItem-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed lightgrey;
+}
+
+.CartItem-name {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+}
+
+.CartItem-count {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  align-items: center;
+}
+
+.CartItem-unitPrice {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  align-items: center;
+}
+
+.CartItem-total {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  align-items: flex-end;
+}
