@@ -12,8 +12,12 @@ const ProductCard = (props, {dispatch}) => (
     <div style={{height: 20}}/>
     <div style={{display: 'flex', flexDirection: 'row', alignSelf: 'stretch', justifyContent: 'space-between'}}>
       <div>$ {props.data.price}</div>
+
+      {/*
+        Button that dispatches the redux action ADD_PRODUCT_TO_CART
+      */}
       <button
-        onClick={() => {dispatch(addProductToCart(props))}}
+        onClick={() => { props.dispatch(addProductToCart(props.data)) }}
       >
         Add to cart
       </button>
