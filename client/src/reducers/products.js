@@ -1,18 +1,16 @@
 const products = (state = [], action) => {
   switch (action.type) {
     case 'ADD_PRODUCT_TO_CART':
+      // check if the item is in the cart
       const itemInCart = [...state].filter(el => el.product.id === action.product.id)[0]
 
       // if item is in cart, increment the count of that item in the array
       if (itemInCart) {
-        const cartWithoutItem = [...state].filter(el => el.product.id !== action.product.id)
-        itemInCart.count ++
-        return [
-          ...cartWithoutItem,
-          itemInCart
-        ]
+        const indexOfItemInCart = state.findIndex(el => el.product.id === action.product.id)
+        const cart = [...state]
+        cart[indexOfItemInCart].count ++
+        return cart
       }
-
       // if item is not in the cart already, create a new object with count = 1 and push it to the array
       else {
         return [
@@ -23,13 +21,13 @@ const products = (state = [], action) => {
           }
         ]
       }
-      
+
     case 'REMOVE_PRODUCT_FROM_CART':
       // get the index of the item in the cart array
       const indexOfItemInCart = state.findIndex(el => el.product.id === action.product.id)
 
       // if the item is in the cart:
-      if (indexOfItemInCart || indexOfItemInCart === 0) {
+      if (indexOfItemInCart || (indexOfItemInCart === 0)) {
         // copy the cart
         const cart = [...state]
 
