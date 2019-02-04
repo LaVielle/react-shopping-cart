@@ -22,7 +22,7 @@ const CartItem = (props, { dispatch }) => (
       </div>
     </div>
     <div className="CartItem-unitPrice">{props.product.price}</div>
-    <div className="CartItem-total">{props.count * props.product.price}</div>
+    <div className="CartItem-total">{(props.count * props.product.price).toFixed(2)}</div>
   </div>
 )
 
