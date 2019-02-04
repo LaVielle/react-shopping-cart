@@ -3,7 +3,6 @@ import CartItem from './CartItem';
 import '../styles/CartTable.css';
 
 const CartTable = ({ products }) => {
-  console.log(products);
 
   const subtotal = products.reduce((subtotal, item) => subtotal + item.count * item.product.price, 0)
   const numberOfUnits = products.reduce((numberOfUnits, item) => numberOfUnits + item.count, 0)
@@ -38,25 +37,23 @@ const CartTable = ({ products }) => {
         Totals
       */}
       <div className="CartTable-total-section">
-        <div className="CartTable-totals">
-          <div>Subtotal</div>
-          <div style={{ width: 20}} />
-          <div>{subtotal}</div>
-        </div>
-        <div className="CartTable-totals">
-          <div>Shipping</div>
-          <div style={{ width: 20}} />
-          <div>{totalShipping}</div>
-        </div>
-        <div className="CartTable-totals">
-          <div>VAT</div>
-          <div style={{ width: 20}} />
-          <div>{taxTotal}</div>
-        </div>
-        <div className="CartTable-totals">
-          <div>Total</div>
-          <div style={{ width: 20}} />
-          <div>{grandTotal}</div>
+        <div style={{ width: 200}}>
+          <div className="CartTable-totals">
+            <div>Subtotal</div>
+            <div>{subtotal}</div>
+          </div>
+          <div className="CartTable-totals">
+            <div>Shipping</div>
+            <div>{totalShipping}</div>
+          </div>
+          <div className="CartTable-totals">
+            <div>VAT</div>
+            <div>{taxTotal}</div>
+          </div>
+          <div className="CartTable-totals">
+            <div>Total</div>
+            <div>{grandTotal}</div>
+          </div>
         </div>
       </div>
 
