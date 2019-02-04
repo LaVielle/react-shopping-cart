@@ -23,6 +23,32 @@ const products = (state = [], action) => {
           }
         ]
       }
+      
+    case 'REMOVE_PRODUCT_FROM_CART':
+      // get the index of the item in the cart array
+      const indexOfItemInCart = state.findIndex(el => el.product.id === action.product.id)
+
+      // if the item is in the cart:
+      if (indexOfItemInCart || indexOfItemInCart === 0) {
+        // copy the cart
+        const cart = [...state]
+
+        // if there are more than one unit of the item in the cart, decrement its count by 1
+        if (state[indexOfItemInCart].count > 1) {
+          cart[indexOfItemInCart].count --
+          return cart
+        }
+        // if there is only one unit of the item in the cart, remove the item
+        else {
+          cart.splice(indexOfItemInCart, 1)
+          return cart
+        }
+      }
+      // if the item is NOT in the cart, return the cart
+      else {
+        return state
+      }
+
     default:
       return state
   }

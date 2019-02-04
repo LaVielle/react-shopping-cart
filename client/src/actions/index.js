@@ -5,3 +5,11 @@ export const addProductToCart = product => {
     product
   })
 }
+
+export const removeProductFromCart = product => {
+  console.log(product);
+  return({
+    type: 'REMOVE_PRODUCT_FROM_CART',
+    product
+  })
+}
