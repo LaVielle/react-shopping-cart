@@ -1,6 +1,7 @@
 .CartItem-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -15,9 +16,30 @@
 
 .CartItem-count {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex: 2;
+  align-items: space-between;
+}
+
+.CartItem-count-button {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 3px;
+}
+
+.CartItem-count-button:hover {
+  cursor: pointer;
+}
+
+.CartItem-count-counter {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   align-items: center;
+  justify-content: center;
 }
 
 .CartItem-unitPrice {
