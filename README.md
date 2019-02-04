@@ -34,8 +34,10 @@ A product is defined as follows:
 
 #### Components
 
+
 ###### `<App>`
 Renders a cart at the top and a grid of product under it.
+
 
 ###### `<CartTable>`
 Renders a table with three sections: headers, items, and totals.
@@ -64,6 +66,7 @@ props: `products`, an array of products in the cart and how much of each:
 ]
 ```
 
+
 ###### `<CartItem>`
 Renders a item in the cart, with product name, product count (+ and - buttons to add or remove units), unit price and total.
 
@@ -71,10 +74,12 @@ props:
   - `product`: object with `count` and `product` properties
   - `dispatch`: function passed by redux to dispatch actions
 
+
 ###### `<ProductGrid>`
 Renders a grid of ProductCard components.
 
 props: `products`, an array of products coming from the database (in our case products.json)
+
 
 ###### `<ProductCard>`
 Renders a card with the product info and a 'Add to cart' button
