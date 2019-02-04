@@ -6,7 +6,7 @@ import '../styles/ProductGrid.css'
 const ProductGrid = (props) => (
   <div className="ProductGrid-grid">
     {
-      props.products.map(item => <ProductCard key={item.id} data={item} /> )
+      props.products.map(item => <ProductCard key={item.id} product={item} /> )
     }
   </div>
 )
